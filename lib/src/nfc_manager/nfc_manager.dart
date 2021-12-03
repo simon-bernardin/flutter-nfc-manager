@@ -45,6 +45,11 @@ class NfcManager {
     return channel.invokeMethod('Nfc#isAvailable').then((value) => value!);
   }
 
+  /// Checks whether the NFC is enabled.
+  Future<bool> isEnabled() async {
+    return channel.invokeMethod('Nfc#isEnabled').then((value) => value!);
+  }
+
   /// (Android only)
   /// Get the NFC on startup or resume of the application and start session
   ///

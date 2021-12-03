@@ -28,6 +28,7 @@ public class SwiftNfcManagerPlugin: NSObject, FlutterPlugin {
 
     switch call.method {
     case "Nfc#isAvailable": handleNfcIsAvailable(call.arguments, result: result)
+    case "Nfc#isEnabled": handleNfcIsAvailable(call.arguments, result: result)
     case "Nfc#startSession": handleNfcStartSession(call.arguments as! [String : Any?], result: result)
     case "Nfc#stopSession": handleNfcStopSession(call.arguments as! [String : Any?], result: result)
     case "Nfc#disposeTag": handleNfcDisposeTag(call.arguments as! [String : Any?], result: result)
